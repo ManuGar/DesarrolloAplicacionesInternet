@@ -1,0 +1,13 @@
+{% extends "AppAppBundle:corredores:ZonaCorredores.html.twig" %}
+
+
+{% block contenido %}
+    {% for mensaje in app.session.flashbag.get('info') %}
+        <p clas="info">{{ mensaje }}</p>
+    {% endfor %}
+    <div class="contenido">
+        <h1>{% trans %}portada.bienvenida {% endtrans %}</h1>
+        <p>{% trans %}portada.mensaje{% endtrans %}</p>
+    </div>
+
+{% endblock %}

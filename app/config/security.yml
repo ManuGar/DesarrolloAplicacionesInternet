@@ -1,0 +1,63 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        corredores:
+            id: corredores_user_provider
+        in_memory:
+            memory: 
+                users:
+                    ryan:
+                        password: ryanpass
+                        roles: 'ROLE_USER'
+                    admin:
+                        password: kitten
+                        roles: 'ROLE_ADMIN'
+    
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        
+        App\CorredoresRiojaDomain\Model\Corredor : plaintext
+        App\CorredoresRiojaDomain\Security\CorredorUser:  plaintext
+           
+    
+    access_control:
+        - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/users, roles: ROLE_SUPER_ADMIN }
+        - { path: ^/admin, roles: ROLE_ADMIN }
+
+    firewalls:
+        
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        
+            # activate different ways to authenticate
+
+            # http_basic: ~
+            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: ~
+            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+        admin:
+            pattern: ^/corredores/admin
+            http_basic: ~
+        default:
+            anonymous: ~
+            http_basic: ~
+            form_login:
+                login_path: usuario_login
+                check_path: usuario_login_check
+                default_target_path: portada
+            provider: corredores
+            logout:
+                path:   usuario_logout
+                target: portada
+
+            
+
+   

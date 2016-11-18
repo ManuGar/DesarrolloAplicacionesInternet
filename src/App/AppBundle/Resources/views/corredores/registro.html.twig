@@ -1,0 +1,17 @@
+{% extends "AppAppBundle:corredores:ZonaCorredores.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/appapp/css/formulario.css')}}" rel="stylesheet" media="all" type="text/css">
+{% endblock %}
+
+
+{% block contenido %}
+    <form action="{{ path('registro') }}" method="post" {{ form_enctype(formulario) }}>
+    {{ form_widget(formulario) }}
+   </form>
+    <div class="clear"> </div> 
+    
+    
+    
+{% endblock %}

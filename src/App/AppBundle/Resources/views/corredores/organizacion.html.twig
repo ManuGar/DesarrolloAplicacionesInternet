@@ -1,0 +1,25 @@
+{% extends "AppAppBundle:corredores:ZonaCorredores.html.twig" %}
+
+
+{% block contenido %}
+
+    <div class="contenido">
+        <div class="centro">
+            <h1>{{ organizacion.getNombre()}}</h1>
+            <p>{{ organizacion.getNombre()}}</p>
+            <p><a href="mailto:{{ organizacion.getEmail()}}">Contacta</a></p>
+            
+            <p>Carreras organizadas:</p>
+            <ol>
+                {% for carr in carrOrgDis %}
+                    <li><a href="{{ path('find_carrera',{'slug': carr.getNombre()})}}">{{ carr.getNombre()}}</a></li>
+                {% endfor %}
+                {% for carr in carrOrgNoDis %}
+                    <li><a href="{{ path('find_carrera',{'slug': carr.getNombre()})}}">{{ carr.getNombre()}}</a></li>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="clear"> </div>   
+
+    </div>
+{% endblock %}

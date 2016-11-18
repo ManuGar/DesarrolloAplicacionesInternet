@@ -1,0 +1,2 @@
+The routing file "/media/magarcd/4E12A6E212A6CE71/Master/DesarrolloAplicacionesInternet/practica2/app/config/routing.yml" contains unsupported keys for "portada": "locales". Expected one of: "resource", "type", "prefix", "pattern", "path", "host", "schemes", "methods", "defaults", "requirements", "options", "condition" in /media/magarcd/4E12A6E212A6CE71/Master/DesarrolloAplicacionesInternet/practica2/app/config/routing.yml (which is being imported from "/media/magarcd/4E12A6E212A6CE71/Master/DesarrolloAplicacionesInternet/practica2/app/config/routing_dev.yml"). 
+

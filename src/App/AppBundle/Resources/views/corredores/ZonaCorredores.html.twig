@@ -1,0 +1,36 @@
+{% extends "::base.html.twig" %}
+
+{%block menu %}
+
+    <div id="menu" >
+        <ul>
+            <li>
+                <a href="{{ path('portada') }}">{{ 'menu.portada' | trans }}<br/></a>
+            </li>
+            <li>
+                <a href="{{ path('find_carreras') }}">{{ 'menu.corredores' | trans }}<br/></a>
+            </li>
+            <li>
+                <a href="{{ path('miscarreras') }}">{{ 'menu.carreras' | trans }}<br/></a>
+            </li>
+
+            {% if app.user %}
+                <li>
+                    <a href="{{ path('perfil') }}">{{ 'menu.zonaPerfil' | trans }}<br/></a>
+                </li>
+                <li>
+                    <a href={{path('usuario_logout')}}>{{ 'menu.logout' | trans }}<br/></a>
+                </li>
+
+            {% else%}
+                <li>
+                    <a href="{{ path('usuario_login') }}">{{ 'menu.login' | trans }}<br/></a>
+                </li>
+            {% endif %}
+
+        </ul>
+        <div style="clear: left;"></div>
+    </div>
+</div>
+{% endblock %}
+

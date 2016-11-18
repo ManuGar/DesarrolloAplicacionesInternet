@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>menu.portada</source>
+                <target>Home</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>menu.corredores</source>
+                <target>Recent entries</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>menu.carreras</source>
+                <target>New entry</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>portada.bienvenida</source>
+                <target>Welcome to La Rioja Races </target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>portada.mensaje</source>
+                <target>La Rioja Races is a web site where runners of all
+                        levels can enroll in organized races in La Rioja.
+                        Below are some of the races to which you can
+                        enroll.
+                </target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>menu.zonaCorredores</source>
+                <target>Runners area
+                </target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>menu.zonaOrganizaciones</source>
+                <target>Organizations area
+                </target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>menu.intranet</source>
+                <target>Intranet
+                </target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>menu.login</source>
+                <target>Login
+                </target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>menu.logout</source>
+                <target>Logout
+                </target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>menu.zonaPerfil</source>
+                <target>Perfil
+                </target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

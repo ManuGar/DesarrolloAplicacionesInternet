@@ -1,0 +1,89 @@
+{% extends "AppAppBundle:corredores:ZonaCorredores.html.twig" %}
+
+
+{% block contenido %}
+    <div class="contenido">
+        <div class="centro">
+            <h1>{{ carrera.getNombre()}}</h1>
+            <div class="parteCelda">
+                <img src="/bundles/appapp/images/ur.png"/>
+            </div>
+            <div class="parteCelda2">
+                <p>Carrera {{ carrera.getNombre()}}</p>
+                <p>Fecha celebración: {{ carrera.getFechaCelebracion() | date("Y/m/d h:i")}}
+                <p>Distancia: {{ carrera.getDistancia()}}</p>
+                <p>Organiza: <a href="{{ path('find_organizacion',{'slug': carrera.getOrganizacion().getNombre})}}">{{ carrera.getOrganizacion().getNombre}}</a></p>  
+            </div>
+        </div>
+        <div class="clear"></div>   
+        <div class="centro">
+            {% if date(carrera.getFechaLimiteInscripcion()) > date('now') %}
+                <h3>Tienes hasta el {{ carrera.getFechaLimiteInscripcion()|date('d M Y')}}  para inscribirte. </h3>
+                <div style="float:right; padding:10px 5px">
+                    <a style="padding:5px 8px 5px 10px;background:#5C7E6D;color:#FFF" 
+                       href="{{ path('inscribir',{'slug': carrera.getNombre()})}}" ><span>Inscríbete</span> </a>
+                </div>
+                <div class="clear"></div>   
+                <h3>Inscritos:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Nombre</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for part in participantes %}
+
+                            <tr>
+                                <td>
+                                    {{part.getDorsal()}}
+                                </td>
+                                <td>   
+                                    {{part.getCorredor().getNombre()}} {{part.getCorredor().getApellidos()}}<br/>
+                                </td>
+                                
+                            </tr>
+                        {% else %}
+                            Todavía no hay inscritos en esta carrera.
+                        {% endfor %}
+                        </tbody>
+                    </table>  
+                
+            {% else %}
+                <h3>Lo sentimos, ya no te puedes inscribir a esta carrera.</h3>   
+                <div class="clear"></div> 
+                <h3>Clasificación:</h3>   
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Nombre</th>
+                            <th>Tiempo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for part in participantes %}
+
+                            <tr>
+                                <td>
+                                    {{part.getDorsal()}}
+                                </td>
+                                <td>   
+                                    {{part.getCorredor().getNombre()}} {{part.getCorredor().getApellidos()}}<br/>
+                                </td>
+                                <th>
+                                    {{part.getTiempo()}}
+                                </th>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>  
+                    {% endif %}
+                    </div>
+                    <div class="clear"> </div>   
+
+                </div>
+
+                {% endblock %}

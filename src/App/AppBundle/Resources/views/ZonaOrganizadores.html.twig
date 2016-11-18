@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+
+{% block menuprincipal %}
+    
+{% endblock %}
+ <div class="barra_menus">	
+      <div class="pestanias">
+        <div class="grupoPestanias">
+            <div class="pestaniaNoSel"><a href="/es/portada">Zona Corredores</a></div>
+	  <div class="pestaniaSel"><a href="/es/organizaciones">Zona Organizadores</a></div>
+          <div class="pestaniaNoSel"><a href="/admin/">Intranet</a></div>
+        </div>
+      </div>
+
+{%block menu %} 
+
+<div id="menu" >
+        <ul>
+          <li>
+            <a href="/es/organizaciones">Portada<br/></a>
+          </li>
+          <li>
+            <a href="/es/organizaciones/perfil">Perfil<br/></a>
+          </li>
+          <li>
+        <a href="/es/organizaciones/nueva_carrera">Añadir carrera<br/></a>
+          </li>
+          <li>
+        <a href="/es/organizaciones/modificar_carreras">Modificar carrera<br/></a>
+          </li>
+           <!--<li>
+        <a href="">Actualizar Clasificaciones<br/></a>
+          </li>-->
+          <li>
+                      <a href="/es/organizaciones/login">Login<br/></a>
+                      </li>
+        </ul>
+        <div style="clear: left;"></div>
+      </div>
+    </div>  
+
+{% endblock %}
+

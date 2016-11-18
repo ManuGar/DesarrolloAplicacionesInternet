@@ -1,0 +1,56 @@
+portada:
+    locales:  { en: "/runners/home", es: "/corredores/portada" }
+    defaults: { _controller: AppAppBundle:Portada:show }
+
+find_corredores:
+    locales:  { en: "/runners/", es: "/corredores/" }
+    defaults: { _controller: AppAppBundle:Corredor:findAll }
+
+find_carreras:
+    locales:  { en: "/runners/races", es: "/corredores/carreras" }
+    defaults: { _controller: AppAppBundle:Carrera:findAll }
+
+find_carrera:
+    locales:  { en: "/runners/race/{slug}", es: "/corredores/carrera/{slug}" }
+    defaults: { _controller: AppAppBundle:Carrera:findBySlug }
+
+find_organizacion:
+    path: /organizacion/{slug}
+    defaults: { _controller: AppAppBundle:Organizacion:findBySlug }
+
+registro:
+    locales:  { en: "/runners/register", es: "/corredores/registro" }
+    defaults: { _controller: AppAppBundle:Corredor:registro }
+    
+admin:
+    locales:  { en: "/admin", es: "/admin" }
+    defaults: { _controller: AppAppBundle:Default:admin }
+
+usuario_login:
+    locales:  { en: "/login", es: "/login" }
+    defaults: { _controller: AppAppBundle:Security:login }
+
+usuario_login_check:
+    locales:  { en: "/login_check", es: "/login_check" }
+    
+usuario_logout:
+    locales:  { en: "/logout", es: "/logout" }
+    
+perfil:
+    locales:  { en: "/runners/perfil", es: "corredores/perfil" }
+    defaults: { _controller: AppAppBundle:Corredor:perfil }
+
+miscarreras:
+    locales:  { en: "/runners/myraces", es: "/corredores/miscarreras" }
+    defaults: { _controller: AppAppBundle:Corredor:miscarreras }
+    
+inscribir:
+    locales:  { en: "/inscribir/{slug}", es: "/inscribir/{slug}" }
+    defaults: { _controller: AppAppBundle:Corredor:inscribir }
+    
+desapuntar:
+    locales:  { en: "/desapuntar/{slug}", es: "/desapuntar/{slug}" }
+    defaults: { _controller: AppAppBundle:Corredor:desapuntar }
+
+    
+

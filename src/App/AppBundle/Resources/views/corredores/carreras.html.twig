@@ -1,0 +1,67 @@
+{% extends "AppAppBundle:corredores:ZonaCorredores.html.twig" %}
+
+
+{% block contenido %}
+    <div class="contenido">
+        <h1>Carreras por disputar</h1>
+        <div class="centro"/>
+        <ul>
+            <li class="columna">
+                <ul>
+                    {% for carr in carrerasNoDis %}
+                        <li class="celda">
+                            <div class="parteCelda">
+                                <img src="/bundles/appapp/images/matutrail.jpg"/>
+                            </div>
+                            <div class="parteCelda2">
+                                <h3><a href="{{ path('find_carrera',{'slug': carr.getNombre()})}}">{{ carr.getNombre()}}</a></h3>
+                                <p>{{ carr.getFechaCelebracion() | date("Y/m/d h:i")}}</p>
+                                <div style="float:right; padding:10px 5px">
+                                    <a style="padding:5px 8px 5px 10px;background:#5C7E6D;color:#FFF" 
+                                       href="{{ path('inscribir',{'slug': carr.getNombre()})}}" ><span>Inscríbete</span> </a>
+                                </div>
+                            </div>    
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="clear"></div> 
+
+
+    <h1>Carreras disputadas</h1>
+    <div class="centro"/>
+    <ul>
+        <li class="columna">
+            <ul>
+                {% for carr in carrerasDis %}
+                <li class="celda">
+                    <div class="parteCelda">
+                            <img src="/bundles/appapp/images/ur.png"/>
+                    </div>
+                    <div class="parteCelda2">
+                        <h3><a href="{{ path('find_carrera',{'slug': carr.getNombre()})}}">{{ carr.getNombre()}}</a></h3>
+                        <p>{{ carr.getFechaCelebracion() | date("Y/m/d h:i")}}</p>
+                        <div style="float:right; padding:10px 5px">
+                            <a style="padding:5px 8px 5px 10px;background:#5C7E6D;color:#FFF" 
+                               href="{{ path('find_carrera',{'slug': carr.getNombre()})}}" ><span>Clasificaciones</span> </a>
+                        </div>
+                    </div>    
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="clear"></div> 
+
+
+
+</div>
+
+
+
+{% endblock %}
+
+

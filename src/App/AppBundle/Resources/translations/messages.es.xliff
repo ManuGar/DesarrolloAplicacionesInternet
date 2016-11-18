@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="es" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>menu.portada</source>
+                <target>Portada</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>menu.corredores</source>
+                <target>Entradas recientes</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>menu.carreras</source>
+                <target>Nueva entrada</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>portada.bienvenida</source>
+                <target>Bienvenido a Carreras por La Rioja </target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>portada.mensaje</source>
+                <target>Carreras por La Rioja es un sitio web donde corredores de todos 
+                        los niveles pueden inscribirse en carreras organizadas en La Rioja. 
+                        A continuación se muestran algunas de las carreras a las que te puedes
+                        inscribir.
+                </target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>menu.zonaCorredores</source>
+                <target>Zona Corredores
+                </target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>menu.zonaOrganizaciones</source>
+                <target>Zona Organizaciones
+                </target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>menu.intranet</source>
+                <target>Intranet
+                </target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>menu.login</source>
+                <target>Login
+                </target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>menu.logout</source>
+                <target>Logout
+                </target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>menu.zonaPerfil</source>
+                <target>Perfil
+                </target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
